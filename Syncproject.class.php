@@ -3,6 +3,7 @@
 class SyncProject
 {
 	private $path;
+	private $fetch;
 	private $projects;
 
 	const SYNC_MASTER = "Votre branche est à jour avec 'origin\\/master'";
@@ -12,7 +13,7 @@ class SyncProject
 	const MODIF_VALID = "Modifications qui seront validées";
 	const MODIF_NOT_VALID = "Modifications qui ne seront pas validées";
 
-	public function __construct($path)
+	public function __construct($path, $fetch)
 	{
 		$path = realpath($path);
 
@@ -25,6 +26,7 @@ class SyncProject
 		}
 
 		$this->path = $path;
+		$this->fetch = $fetch;
 		$this->projects = [];
 	}
 
@@ -54,6 +56,11 @@ class SyncProject
 
 			$projectPath = $project['path'];
 			$gitStatus = `cd $projectPath && git status`;
+
+			if ($this->fetch) {
+				$result = `cd $projectPath && git fetch`;
+				echo $result;
+			}
 
 			$project['status'] = [];
 			$project['status']['SYNC_MASTER'] = preg_match('/'.self::SYNC_MASTER.'/', $gitStatus);
