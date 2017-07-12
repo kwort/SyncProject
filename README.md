@@ -36,15 +36,13 @@ Params
 Exemple of result :
 -------------------
 
-'''bash
-+-------------------------------------------------------------------+
-| Projects                                         | Local | Master |
-+-------------------------------------------------------------------+
-| XamppSwitcher                                    | NO     | YES   |
-| chosenByGroup                                    | NO     | YES   |
-| SnippetSymfony                                   | NO     | YES   |
-| hello-world-react                                | YES    | YES   |
-| powering-up-with-react                           | NO     | YES   |
-| slim-framework-3-with-grafikart                  | YES    | YES   |
-+-------------------------------------------------------------------+
-'''
+	+-------------------------------------------------------------------+
+	| Projects                                         | Local | Master |
+	+-------------------------------------------------------------------+
+	| XamppSwitcher                                    | NO     | YES   |
+	| chosenByGroup                                    | NO     | YES   |
+	| SnippetSymfony                                   | NO     | YES   |
+	| hello-world-react                                | YES    | YES   |
+	| powering-up-with-react                           | NO     | YES   |
+	| slim-framework-3-with-grafikart                  | YES    | YES   |
+	+-------------------------------------------------------------------+
