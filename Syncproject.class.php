@@ -55,10 +55,10 @@ class SyncProject
 			$project = &$project[key($project)];
 
 			$projectPath = $project['path'];
-			$gitStatus = `cd $projectPath && git status`;
+			$gitStatus = `cd "$projectPath" && git status`;
 
 			if ($this->fetch) {
-				$result = `cd $projectPath && git fetch`;
+				$result = `cd "$projectPath" && git fetch`;
 				echo $result;
 			}
 
